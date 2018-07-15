@@ -29,8 +29,12 @@ function getCar() {
     return Car[final];
 }
 
-if (process.argv[2]!=" "){ 
+if (process.argv.length >= 5){
     console.log('you will live in a '+process.argv[2]+' Drive a '+process.argv[3]+' and you will have ' +process.argv[4]+' kids!')
-} else{
-    console.log('you will live in a '+gethome()+' Drive a '+getCar()+' and you will have ' +getchilds()+' kids!');
+}else if (process.argv.length ==4){
+    console.log('you will live in a '+process.argv[2]+' Drive a '+process.argv[3]+' and you will have ' +getchilds()+' kids!')
+}else if (process.argv.length == 3){
+    console.log('you will live in a '+process.argv[2]+' Drive a '+getCar()+' and you will have ' +getchilds()+' kids!')
+}else {
+    console.log('you will live in a '+gethome()+' Drive a '+getCar()+' and you will have ' +getchilds()+' kids!')
 }
